@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_owl.card" >
+        <div class="card d-inline-block m-2" style="width: 18rem;">
+            <div class="card-header">
+                <button type="button" t-on-click="hideBody">
+                    Ocultar
+                </button>
+            </div>
+            <div class="card-body" t-if="showBody.val">
+                <h5 class="card-title" t-esc="props.title">
+                </h5>
+                <p class="card-text" t-out="props.content">
+                </p>
+                <t t-slot="default">
+                    Default body
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>

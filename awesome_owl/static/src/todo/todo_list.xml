@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_owl.todo_list"
+        t-foreach="items"
+        t-as="item"
+        t-key="item.id"
+    >
+        <div>
+            <TodoItem
+                id="item.id"
+                description="item.description"
+                isCompleted="item.isCompleted"
+                toggleState="toggleItem"
+                deleteTodo="deleteTodo"
+            />
+        </div>
+    </t>
+
+</templates>
