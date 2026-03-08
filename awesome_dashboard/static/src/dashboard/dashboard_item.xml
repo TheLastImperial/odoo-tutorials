@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="awesome_dashboard.DashboardItem">
+        <div class="card d-inline-block m-2" t-att-style="'width: ' + divWidth">
+            <!-- <div class="card-header">
+                <t t-slot="header">
+                    Header
+                </t>
+            </div> -->
+            <div class="card-body">
+                <t t-slot="default">
+                    Body
+                </t>
+            </div>
+        </div>
+    </t>
+</templates>

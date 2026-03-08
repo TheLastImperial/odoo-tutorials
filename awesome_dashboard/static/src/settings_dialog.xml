@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="awesome_dashboard.settings_dialog">
+        <Dialog size="'md'" title="title" modalRef="modalRef">
+            <t t-foreach="items" t-as="item" t-key="item.id">
+                <div>
+                    <input type="checkbox"
+                        t-att-descId="item.id"
+                        t-on-change="_checkbox"
+                        t-att-checked="_setVal(item.id)"
+                        />
+                    <label >
+                        <p t-esc="item.description"/>
+                    </label>
+                </div>
+            </t>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary o-default-button" t-on-click="_confirm">
+                    Save
+                </button>
+            </t>
+        </Dialog>
+    </t>
+</templates>

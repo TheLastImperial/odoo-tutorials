@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xml:space="preserve">
+    <t t-name="awesome_dashboard.dashboard_action">
+        <div >
+            <button class="btn btn-primary"
+                t-on-click="clickCustomers"
+            >
+                Customers
+            </button>
+            <button class="btn btn-primary"
+                t-on-click="clickLeads">
+                Leads
+            </button>
+            <input type="checkbox" t-on-change="setAutoupdate"/>
+            <label> Autoupdate </label>
+
+            <button class="d-print-none btn lh-sm p-0 border-0 o-dropdown dropdown-toggle dropdown"
+                data-hotkey="u"
+                data-tooltip="Settings"
+                aria-label="Actions menu"
+                aria-expanded="false"
+                title="" style="position: relative;"
+                t-on-click="openSettings">
+                <i class="fa fa-fw fa-cog"></i>
+            </button>
+        </div>
+        <LazyComponent
+            Component="'awesome_dashboard.AwesomeDashboard'"
+            bundle="'awesome_dashboard.dashboard_asset'"
+            props="{'stats': stats, 'settings': settings}"
+        />
+        <!-- props="{'items': items, 'stats': stats}" -->
+    </t>
+</template>
